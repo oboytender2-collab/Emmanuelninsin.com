@@ -159,3 +159,45 @@ h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;letter-spacing:-.035em;marg
 @media(max-width:800px){.sports-grid{grid-template-columns:1fr}.sports-toolbar{align-items:flex-start;flex-direction:column}}
 
 .sports-source{margin-top:1rem;font-size:.85rem;opacity:.8}.sports-source a{font-weight:700}
+
+
+/* My Story photo gallery */
+.story-gallery-section { background: #fff; }
+.story-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 38px;
+}
+.gallery-item {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px;
+  background: #eef1f5;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, .08);
+}
+.gallery-item[hidden] { display: none !important; }
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-note {
+  margin-top: 24px;
+  padding: 16px 18px;
+  background: #fbf7ed;
+  border-left: 4px solid var(--accent);
+  color: var(--muted);
+  font-size: .92rem;
+}
+@media (max-width: 900px) {
+  .story-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .story-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+}
