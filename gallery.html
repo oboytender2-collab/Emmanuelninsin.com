@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery | Emmanuel Osei Kojo Ninsin</title>
+<style>
+:root{color-scheme:light;--ink:#172033;--gold:#e3b51a;--paper:#f7f8fb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:var(--paper);color:var(--ink)}
+header{padding:2rem 1rem;text-align:center;background:#172033;color:white;border-bottom:5px solid var(--gold)}
+header h1{margin:0 0 .5rem;font-size:clamp(1.6rem,4vw,2.5rem)}header p{margin:0;color:#e5e7eb}
+main{max-width:1200px;margin:auto;padding:1.25rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem}
+figure{margin:0;background:white;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px #17203318}
+figure img{display:block;width:100%;height:320px;object-fit:cover;cursor:zoom-in}
+figcaption{padding:.85rem 1rem;font-size:.95rem}
+.note{color:#4b5563;font-size:.9rem;text-align:center;margin:1.25rem 0}
+dialog{padding:0;border:0;border-radius:12px;max-width:94vw;max-height:94vh;background:#111}
+dialog img{display:block;max-width:94vw;max-height:88vh;object-fit:contain}
+dialog button{display:block;margin:.5rem auto;padding:.5rem 1rem}
+</style>
+</head>
+<body>
+<header><h1>My Gallery</h1><p>Emmanuel Osei Kojo Ninsin · Leadership, learning and memorable moments</p></header>
+<main><section class="gallery" aria-label="Photo gallery">
+<figure><img src="images/gallery-01.jpg" alt="DESAG @20 — personal portrait" loading="lazy"><figcaption>DESAG @20 — personal portrait</figcaption></figure>
+<figure><img src="images/gallery-02.jpg" alt="With fellow DESAG members" loading="lazy"><figcaption>With fellow DESAG members</figcaption></figure>
+<figure><img src="images/gallery-03.jpg" alt="With a fellow DESAG member" loading="lazy"><figcaption>With a fellow DESAG member</figcaption></figure>
+<figure><img src="images/gallery-04.jpg" alt="DESAG leadership — Welfare Officer" loading="lazy"><figcaption>DESAG leadership — Welfare Officer</figcaption></figure>
+<figure><img src="images/gallery-05.jpg" alt="At the 19th Annual Regional Congress 2026" loading="lazy"><figcaption>At the 19th Annual Regional Congress 2026</figcaption></figure>
+<figure><img src="images/gallery-06.jpg" alt="With fellow delegates at the congress" loading="lazy"><figcaption>With fellow delegates at the congress</figcaption></figure>
+<figure><img src="images/gallery-07.jpg" alt="A moment with a fellow delegate" loading="lazy"><figcaption>A moment with a fellow delegate</figcaption></figure>
+<figure><img src="images/gallery-08.jpg" alt="Reading during the congress proceedings" loading="lazy"><figcaption>Reading during the congress proceedings</figcaption></figure>
+<figure><img src="images/gallery-09.jpg" alt="Standing with fellow leaders" loading="lazy"><figcaption>Standing with fellow leaders</figcaption></figure>
+<figure><img src="images/gallery-10.jpg" alt="Congress gathering and fellowship" loading="lazy"><figcaption>Congress gathering and fellowship</figcaption></figure>
+</section><p class="note">Photographs from DESAG activities and the 19th Annual Regional Congress 2026.</p></main>
+<dialog id="viewer"><img alt="Expanded gallery photograph"><button type="button" id="close">Close</button></dialog>
+<script>
+const viewer=document.getElementById('viewer'), big=viewer.querySelector('img');
+document.querySelectorAll('.gallery img').forEach(img=>img.addEventListener('click',()=>{big.src=img.src;big.alt=img.alt;viewer.showModal()}));
+document.getElementById('close').addEventListener('click',()=>viewer.close());
+viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});
+</script></body></html>
