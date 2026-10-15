@@ -4,267 +4,343 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Story | Emmanuel Osei Ninsin</title>
+  <meta name="description" content="The story, education, achievements, books and photo gallery of Emmanuel Osei Kojo Ninsin.">
+  <title>My Story | Emmanuel Osei Kojo Ninsin</title>
+
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.8;
-      background: #f4f7fb;
-      color: #263238;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #263445;
+      background: #f4f7fa;
     }
 
     header {
-      background: #073b4c;
+      background: #102b46;
       color: white;
       text-align: center;
-      padding: 40px 20px;
+      padding: 35px 15px;
+      border-bottom: 5px solid #d8a83e;
     }
 
     header h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
+      margin: 0;
+      font-size: 2.2rem;
     }
 
     header p {
-      color: #d5eaf0;
+      margin-bottom: 0;
     }
 
     nav {
-      background: #062d3a;
+      background: white;
       padding: 12px;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 2px 8px #00000012;
     }
 
     nav a {
-      color: white;
+      color: #102b46;
       text-decoration: none;
-      margin: 0 10px;
-      display: inline-block;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
     }
 
     nav a:hover {
-      color: #ffd166;
+      background: #eaf0f6;
     }
 
     main {
-      max-width: 950px;
-      margin: 30px auto;
-      padding: 0 18px;
+      width: 92%;
+      max-width: 1050px;
+      margin: 25px auto;
     }
 
     section {
       background: white;
-      margin-bottom: 22px;
       padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+      margin-bottom: 22px;
+      border-radius: 12px;
+      box-shadow: 0 3px 14px #102b4610;
     }
 
     h2 {
-      color: #073b4c;
-      margin-bottom: 14px;
-      border-bottom: 2px solid #e3edf0;
+      color: #102b46;
+      margin-top: 0;
+      border-bottom: 2px solid #d8a83e;
       padding-bottom: 8px;
     }
 
-    p {
-      margin-bottom: 12px;
+    .welcome {
+      text-align: center;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .links a {
+      background: #edf2f7;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      color: #102b46;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      background: #e3d5b4;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery figure {
+      margin: 0;
+      background: #f4f7fa;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 240px;
+      display: block;
+      object-fit: cover;
+      background: #e5eaf0;
+    }
+
+    .gallery figcaption {
+      padding: 12px;
+      font-weight: bold;
+      text-align: center;
     }
 
     .gallery-note {
-      background: #edf6f8;
-      padding: 15px;
-      border-radius: 8px;
+      background: #fff8e7;
+      padding: 12px;
+      border-left: 4px solid #d8a83e;
     }
 
     footer {
-      background: #062d3a;
+      background: #102b46;
       color: white;
       text-align: center;
-      padding: 22px;
-      margin-top: 35px;
+      padding: 20px;
     }
 
     footer a {
-      color: #ffd166;
+      color: #f4d58d;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 500px) {
       header h1 {
-        font-size: 25px;
+        font-size: 1.7rem;
       }
 
       section {
         padding: 18px;
-      }
-
-      nav a {
-        margin: 5px 7px;
       }
     }
   </style>
 </head>
 
 <body>
+
   <header>
     <h1>My Story</h1>
-    <p>The Journey of Emmanuel Osei Ninsin</p>
-    <p>Education, Leadership, Faith, and the Pursuit of Justice</p>
+    <p>Emmanuel Osei Kojo Ninsin — Education, Leadership and Purpose</p>
   </header>
 
-  <nav>
+  <nav aria-label="My Story navigation">
     <a href="index.html">Home</a>
-    <a href="my-story.html">My Story</a>
-    <a href="books.html">My Books</a>
-    <a href="contact.html">Contact Me</a>
+    <a href="#untold-story">Untold Story</a>
+    <a href="#my-books">My Books</a>
+    <a href="#galleries">Galleries</a>
+    <a href="#contact">Contact Me</a>
   </nav>
 
   <main>
-    <section id="biography">
-      <h2>Biography</h2>
-      <p>
-        My name is <strong>Emmanuel Osei Ninsin</strong>. My life story
-        is a journey of learning, perseverance, faith, leadership, and
-        determination to build a meaningful future.
-      </p>
-      <p>
-        My experiences have taught me that a person's background
-        should not determine the limits of their dreams. Through
-        education, discipline, and the support of people who believe
-        in me, I continue to work towards my goals.
-      </p>
-      <p>
-        My story is still unfolding. Every new experience presents an
-        opportunity to learn, grow, serve others, and make a difference.
-      </p>
-    </section>
 
-    <section id="education">
-      <h2>My Educational Journey</h2>
+    <section class="welcome">
+      <h2>Welcome to My Story</h2>
       <p>
-        My educational journey began at <strong>Ntontom M/A Basic
-        School</strong>. From my early years, I worked hard to maintain
-        a strong academic record and build a foundation for my future.
+        Every life has a story, every challenge teaches a lesson,
+        and every achievement represents another step forward.
+        This page shares my journey through education, leadership,
+        writing and my ambition to promote justice.
       </p>
-      <p>
-        I later attended <strong>Praprababida M/A JHS</strong>, where
-        competition, discipline, resilience, and preparation shaped
-        my academic experience. I completed the Basic Education
-        Certificate Examination with an aggregate of <strong>12</strong>.
-      </p>
-      <p>
-        I continued at <strong>University Practice Senior High School</strong>
-        in Cape Coast, studying General Arts. My elective subjects
-        included Geography, Economics, Christian Religious Studies,
-        and Government.
-      </p>
-      <p>
-        My SHS journey came with financial challenges and limited
-        access to some learning materials. Mentors such as Sir Andy
-        Amo Smith, known as Khaptain, and Francis Ogoe, known as Pay
-        Money, helped shape my outlook on education and life.
-      </p>
-      <p>
-        After senior high school, I spent time working before continuing
-        my education at the <strong>University of Cape Coast College
-        of Distance Education (UCC CODE)</strong>, where I am pursuing
-        a Bachelor of Education in Social Studies.
-      </p>
-      <p>
-        My tertiary journey continues to strengthen my understanding
-        of society, governance, education, and leadership.
-      </p>
-    </section>
 
-    <section id="achievements">
-      <h2>My Achievements and Leadership</h2>
-      <p>
-        I believe achievement is not only about personal success but
-        also about using opportunities to serve others.
-      </p>
-      <p>
-        I contested for the position of <strong>DESAG-UCC Central
-        Regional Welfare Officer</strong>, campaigning for student
-        welfare, inclusion, effective communication, and the needs
-        of distance-learning students.
-      </p>
-      <p>
-        I was elected Central Regional Welfare Officer for the
-        <strong>2026/2027 academic year</strong> and sworn into office
-        on 10 October 2026 at the UCC CODE Conference Centre.
-      </p>
-      <p>
-        This role gives me an opportunity to listen to students,
-        promote their welfare, and contribute to a supportive
-        student community.
-      </p>
-    </section>
-
-    <section id="law-justice">
-      <h2>My Dream of Law and Justice</h2>
-      <p>
-        Beyond my current studies, I aspire to study law and become
-        a lawyer committed to justice, fairness, and the protection
-        of human rights.
-      </p>
-      <p>
-        I am particularly concerned about access to justice for
-        disadvantaged people, unfair trials, and discrimination.
-        I hope to use my future legal education and professional
-        experience to advocate for people whose voices are often
-        overlooked.
-      </p>
-      <p>
-        To me, justice should not be a privilege reserved for the
-        powerful. Everyone deserves fairness, dignity, and the
-        opportunity to be heard.
-      </p>
-    </section>
-
-    <section id="faith">
-      <h2>Faith and Personal Values</h2>
-      <p>
-        My faith is an important part of my life. As one of Jehovah's
-        Witnesses, I value the guidance of the Bible and seek to apply
-        its principles in my daily conduct.
-      </p>
-      <p>
-        Honesty, humility, perseverance, respect, and love for others
-        are values I strive to uphold as I pursue my goals.
-      </p>
-      <p>
-        <a href="https://www.jw.org/" target="_blank"
-           rel="noopener noreferrer">Visit JW.ORG</a>
-      </p>
-    </section>
-
-    <section id="gallery">
-      <h2>My Photo Gallery</h2>
-      <p>
-        This section is dedicated to photographs documenting my
-        educational journey, leadership experiences, achievements,
-        and memorable moments.
-      </p>
-      <div class="gallery-note">
-        <p><strong>Photo gallery coming soon.</strong></p>
-        <p>
-          My photographs will be added here as the gallery is organised.
-          Each image will help tell a part of my story.
-        </p>
+      <div class="links">
+        <a href="#untold-story">Untold Story</a>
+        <a href="#my-books">My Books</a>
+        <a href="#galleries">Photo Gallery</a>
+        <a href="#contact">Contact Me</a>
       </div>
     </section>
+
+    <section id="untold-story">
+      <h2>Untold Story</h2>
+
+      <h3>My Educational Journey</h3>
+      <p>
+        My educational journey began at Ntontom M/A Basic School
+        and continued at Praprababida M/A JHS. I later attended
+        University Practice Senior High School, where I studied
+        General Arts.
+      </p>
+
+      <p>
+        I am continuing my tertiary education at the University
+        of Cape Coast, College of Distance Education, pursuing a
+        Bachelor of Education in Social Studies. My journey is
+        still ongoing, and I remain committed to learning and
+        personal development.
+      </p>
+
+      <h3>Leadership and Achievements</h3>
+      <p>
+        My interest in leadership is rooted in service, fairness,
+        communication and the welfare of others. I was elected
+        DESAG-UCC Central Regional Welfare Officer for the
+        2026/2027 term and sworn into office on 10 October 2026.
+      </p>
+
+      <h3>My Interest in Law and Justice</h3>
+      <p>
+        I aspire to study law and contribute to the promotion of
+        human rights, fair trials and access to justice,
+        especially for people who face disadvantages.
+      </p>
+
+      <p>
+        My story is still unfolding. I believe that education,
+        perseverance and service can help me make a meaningful
+        contribution to society.
+      </p>
+    </section>
+
+    <section id="my-books">
+      <h2>My Books</h2>
+
+      <h3>Education Is Key to Life</h3>
+      <p>
+        This book project explores the importance of education
+        in personal development, practical skills, leadership
+        and positive change.
+      </p>
+
+      <p>
+        <strong>Volume One:</strong> My educational journey and
+        the lessons learned along the way.
+      </p>
+
+      <p>
+        <strong>Volume Two — From Knowledge to Transformation:</strong>
+        Turning education into practical skills, personal growth,
+        leadership and lasting change.
+      </p>
+
+      <p>
+        Information about additional volumes and available
+        publications will be added as they are finalised.
+      </p>
+    </section>
+
+    <section id="galleries">
+      <h2>Galleries</h2>
+      <p>
+        This gallery is intended to showcase my personal
+        photographs, educational experiences, leadership
+        activities and memorable milestones.
+      </p>
+
+      <p class="gallery-note">
+        The image paths below are examples. They must be matched
+        to the actual photo filenames and folders in your GitHub
+        repository before the pictures can display correctly.
+      </p>
+
+      <div class="gallery">
+        <figure>
+          <img src="images/gallery-1.jpg"
+               alt="Personal photograph"
+               loading="lazy">
+          <figcaption>Personal Moments</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/gallery-2.jpg"
+               alt="Educational journey photograph"
+               loading="lazy">
+          <figcaption>My Educational Journey</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/gallery-3.jpg"
+               alt="Leadership activity photograph"
+               loading="lazy">
+          <figcaption>Leadership and Service</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/gallery-4.jpg"
+               alt="Academic milestone photograph"
+               loading="lazy">
+          <figcaption>Academic Milestones</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/gallery-5.jpg"
+               alt="Memorable personal experience"
+               loading="lazy">
+          <figcaption>Memorable Experiences</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/gallery-6.jpg"
+               alt="Additional personal photograph"
+               loading="lazy">
+          <figcaption>More Memories</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>
+        Thank you for visiting my story. You can use the contact
+        information published on my main website to get in touch.
+      </p>
+      <p><a href="index.html">Return to Home</a></p>
+    </section>
+
   </main>
 
   <footer>
-    <p>&copy; 2026 Emmanuel Osei Ninsin. All rights reserved.</p>
-    <p>Education • Leadership • Faith • Justice</p>
-    <p><a href="index.html">Return to Home</a></p>
+    <p>© 2026 Emmanuel Osei Ninsin. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
