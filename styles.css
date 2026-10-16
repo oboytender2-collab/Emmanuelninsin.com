@@ -201,7 +201,16 @@ h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;letter-spacing:-.035em;marg
 @media (max-width: 560px) {
   .story-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 }
+
+/* Hide navigation on all pages except the homepage */
 body:not(.homepage) .site-header,
 body:not(.homepage) nav {
   display: none !important;
 }
+
+/* Keep the homepage navigation visible */
+body.homepage .site-header,
+body.homepage nav {
+  display: block !important;
+}
+
