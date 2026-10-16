@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Daily Bible Verse from the New World Translation of the Holy Scriptures, sourced from JW.ORG.">
+  <meta name="description" content="Daily Bible Verse from the New World Translation of the Holy Scriptures.">
   <title>Daily Bible Verse | Emmanuel Osei Kojo Ninsin</title>
 
   <style>
@@ -14,55 +14,51 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f7fb;
-      color: #263238;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #263238;
     }
 
     main {
       width: 100%;
       max-width: 850px;
-      margin: 0 auto;
-      padding: 50px 20px;
+      margin: auto;
+      padding: 40px 20px;
       flex: 1;
     }
 
-    .page-heading {
+    h1 {
       text-align: center;
       color: #17365d;
-      font-size: 30px;
-      margin: 0 0 30px;
-      letter-spacing: 1px;
+      margin-bottom: 30px;
     }
 
     .verse-card {
-      background: #ffffff;
-      padding: 30px 24px;
+      background: #fff;
       border-radius: 14px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      padding: 30px 24px;
       text-align: center;
+      box-shadow: 0 4px 18px rgba(0,0,0,.08);
     }
 
     .verse-card h2 {
       color: #17365d;
       margin-top: 0;
-      font-size: 25px;
     }
 
     #verse-text {
-      font-size: 20px;
+      font-size: 21px;
       line-height: 1.8;
-      margin: 24px 0;
+      margin: 25px 0 12px;
       white-space: pre-line;
     }
 
     #verse-reference {
-      color: #536d8a;
       font-weight: bold;
-      font-size: 17px;
+      color: #17365d;
     }
 
     .source {
@@ -74,28 +70,24 @@
 
     a {
       color: #1558a6;
-      font-weight: bold;
     }
 
-    .read-link {
+    .visit-link {
       display: inline-block;
       margin-top: 20px;
-      padding: 13px 20px;
+      padding: 12px 22px;
+      border-radius: 7px;
       background: #17365d;
       color: white;
       text-decoration: none;
-      border-radius: 7px;
-    }
-
-    .read-link:hover {
-      background: #24558c;
+      font-weight: bold;
     }
 
     footer {
       background: #17365d;
       color: white;
       text-align: center;
-      padding: 25px 15px;
+      padding: 24px 15px;
       line-height: 1.8;
     }
 
@@ -106,53 +98,30 @@
     footer p {
       margin: 5px 0;
     }
-
-    @media (max-width: 600px) {
-      main {
-        padding: 35px 15px;
-      }
-
-      .page-heading {
-        font-size: 25px;
-      }
-
-      .verse-card {
-        padding: 25px 18px;
-      }
-
-      #verse-text {
-        font-size: 18px;
-      }
-    }
   </style>
 </head>
 
 <body>
-
   <main>
-    <h1 class="page-heading">DAILY BIBLE VERSE</h1>
+    <h1>DAILY BIBLE VERSE</h1>
 
     <section class="verse-card">
       <h2>Bible Verse</h2>
 
-      <p id="verse-text">Welcome! Visit JW.ORG to read today's Bible text.</p>
-
+      <p id="verse-text">Loading today’s verse…</p>
       <p id="verse-reference"></p>
 
       <div class="source">
-        New World Translation of the Holy Scriptures — source:
-        <a href="https://www.jw.org/" target="_blank" rel="noopener noreferrer">
-          JW.ORG
-        </a>
+        New World Translation of the Holy Scriptures<br>
+        Source:
+        <a href="https://www.jw.org/"
+           target="_blank" rel="noopener noreferrer">JW.ORG</a>
       </div>
 
-      <a
-        class="read-link"
-        href="https://www.jw.org/en/library/bible/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Read the Bible on JW.ORG
+      <a class="visit-link"
+         href="https://www.jw.org/"
+         target="_blank" rel="noopener noreferrer">
+        Visit JW.ORG
       </a>
     </section>
   </main>
@@ -163,5 +132,6 @@
     <p>&copy; 2026 Emmanuel Osei Kojo Ninsin. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
