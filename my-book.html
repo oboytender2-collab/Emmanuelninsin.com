@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore books by Emmanuel Osei Kojo Ninsin, including Education Is Key to Life and The Last Witness.">
+  <meta name="description" content="Explore the books of Emmanuel Osei Kojo Ninsin: Education Is Key to Life and The Last Witness mystery-suspense series.">
   <link rel="stylesheet" href="styles.css">
   <title>My Books | Emmanuel Osei Kojo Ninsin</title>
+  <style>
+    .books-intro{max-width:850px;margin:0 auto 28px}
+    .book-group{margin:34px 0}
+    .book-group h2{margin-bottom:14px}
+    .book-card{height:100%;display:flex;flex-direction:column;gap:10px}
+    .book-card .book-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:8px}
+    .book-card .book-actions a{display:inline-block;text-decoration:none;text-align:center}
+    .book-note{font-size:.92rem;opacity:.82}
+    .book-tag{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -29,54 +39,81 @@
     <div class="container">
       <p class="eyebrow">MY BOOKS AND PUBLICATIONS</p>
       <h1>My Books</h1>
-      <p>Welcome to my book collection. Explore my educational and motivational writing on learning, personal development, leadership, practical skills, and positive change, alongside my mystery-suspense novel.</p>
+      <p class="books-intro">Welcome to my book collection. Explore <em>Education Is Key to Life</em>, a series about learning, personal growth, leadership and positive change, as well as <em>The Last Witness</em>, a Ghana-set mystery-suspense series.</p>
 
-      <div class="cards">
-        <article class="card">
-          <p class="eyebrow">VOLUME ONE</p>
-          <h2>Education Is Key to Life</h2>
-          <p>Discover the foundations of my educational and motivational writing and the importance of education in shaping life and future opportunities.</p>
-          <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Ninsin</p>
-          <div class="book-actions">
-            <a class="btn primary" href="Education_Is_Key_to_Life_Print_Ready.pdf" target="_blank" rel="noopener">Read Volume One</a>
-            <a class="btn secondary" href="Education_Is_Key_to_Life_Print_Ready.pdf" download>Download PDF</a>
-          </div>
-        </article>
+      <section class="book-group" aria-labelledby="education-series">
+        <h2 id="education-series">Education Is Key to Life</h2>
+        <div class="cards">
+          <article class="card book-card">
+            <p class="book-tag">Volume One</p>
+            <h3>Education Is Key to Life</h3>
+            <p>Discover the foundations of my educational and motivational writing and the importance of education in shaping life and future opportunities.</p>
+            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Ninsin</p>
+            <div class="book-actions">
+              <a class="btn primary" href="Education_Is_Key_to_Life_Print_Ready.pdf" target="_blank" rel="noopener">Read online</a>
+              <a class="btn secondary" href="Education_Is_Key_to_Life_Print_Ready.pdf" download>Download PDF</a>
+            </div>
+          </article>
+          <article class="card book-card">
+            <p class="book-tag">Volume Two</p>
+            <h3>From Knowledge to Transformation</h3>
+            <p>Turning education into practical skills, personal growth, leadership and lasting change.</p>
+            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Ninsin · 2026</p>
+            <div class="book-actions">
+              <a class="btn primary" href="Education_Is_Key_to_Life_Volume_Two_Print_Ready_Clean.pdf" target="_blank" rel="noopener">Read online</a>
+              <a class="btn secondary" href="Education_Is_Key_to_Life_Volume_Two_Print_Ready_Clean.pdf" download>Download PDF</a>
+            </div>
+          </article>
+          <article class="card book-card">
+            <p class="book-tag">Volume Three</p>
+            <h3>From Transformation to Impact</h3>
+            <p>Explore how personal growth can become practical service, responsible leadership and positive change in society.</p>
+            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Ninsin · 2026</p>
+            <div class="book-actions">
+              <a class="btn primary" href="Volume_Three_From_Transformation_to_Impact_2.pdf" target="_blank" rel="noopener">Read online</a>
+              <a class="btn secondary" href="Volume_Three_From_Transformation_to_Impact_2.pdf" download>Download PDF</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        <article class="card">
-          <p class="eyebrow">VOLUME TWO</p>
-          <h2>From Knowledge to Transformation</h2>
-          <p>Explore how education can be turned into practical skills, personal growth, leadership, and lasting change.</p>
-          <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Ninsin <span>•</span> <strong>2026</strong></p>
-          <div class="book-actions">
-            <a class="btn primary" href="Education_Is_Key_to_Life_Volume_Two_Print_Ready_Clean.pdf" target="_blank" rel="noopener">Read Volume Two</a>
-            <a class="btn secondary" href="Education_Is_Key_to_Life_Volume_Two_Print_Ready_Clean.pdf" download>Download PDF</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <p class="eyebrow">VOLUME THREE</p>
-          <h2>From Transformation to Impact</h2>
-          <p>Continue the journey of education beyond personal growth towards meaningful contributions, leadership, and positive change in society.</p>
-          <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Ninsin <span>•</span> <strong>2026</strong></p>
-          <div class="book-actions">
-            <a class="btn primary" href="Volume_Three_From_Transformation_to_Impact_2.pdf" target="_blank" rel="noopener">Read Volume Three</a>
-            <a class="btn secondary" href="Volume_Three_From_Transformation_to_Impact_2.pdf" download>Download PDF</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <p class="eyebrow">MYSTERY • SUSPENSE</p>
-          <h2>The Last Witness</h2>
-          <p>A Ghana-set mystery-suspense novel about a murdered judge, missing records, buried secrets, and the search for truth.</p>
-          <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Kojo Ninsin <span>•</span> <strong>2026</strong></p>
-          <div class="book-actions">
-            <a class="btn primary" href="The_Last_Witness_COMPLETE_PRINT_READY_Corrected.pdf" target="_blank" rel="noopener">Read The Last Witness</a>
-            <a class="btn secondary" href="The_Last_Witness_COMPLETE_PRINT_READY_Corrected.pdf" download>Download PDF</a>
-            <a class="btn secondary" href="the-last-witness.html" target="_blank" rel="noopener">Read Online</a>
-          </div>
-        </article>
-      </div>
+      <section class="book-group" aria-labelledby="last-witness-series">
+        <h2 id="last-witness-series">The Last Witness</h2>
+        <p>A mystery-suspense series set in Ghana, following investigations into a murdered judge, missing records and long-buried questions.</p>
+        <div class="cards">
+          <article class="card book-card">
+            <p class="book-tag">Volume One</p>
+            <h3>The Last Witness</h3>
+            <p>The opening instalment of the mystery-suspense story.</p>
+            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Kojo Ninsin</p>
+            <div class="book-actions">
+              <a class="btn primary" href="The_Last_Witness_COMPLETE_PRINT_READY_Corrected.pdf" target="_blank" rel="noopener">Read online</a>
+              <a class="btn secondary" href="The_Last_Witness_COMPLETE_PRINT_READY_Corrected.pdf" download>Download PDF</a>
+            </div>
+          </article>
+          <article class="card book-card">
+            <p class="book-tag">Volume Two</p>
+            <h3>The Last Witness — Volume Two</h3>
+            <p>Continue the investigation as the records, testimony and unanswered questions develop.</p>
+            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Kojo Ninsin · 2026</p>
+            <div class="book-actions">
+              <a class="btn primary" href="The_Last_Witness_Volume_Two_Expanded_to_80000_Words.pdf" target="_blank" rel="noopener">Read online</a>
+              <a class="btn secondary" href="The_Last_Witness_Volume_Two_Expanded_to_80000_Words.pdf" download>Download PDF</a>
+            </div>
+          </article>
+          <article class="card book-card">
+            <p class="book-tag">Volume Three</p>
+            <h3>The Last Witness — The Fifth Copy</h3>
+            <p>The next stage of the investigation, where disputed documents raise new questions without making assumptions into proof.</p>
+            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Kojo Ninsin · 2026</p>
+            <div class="book-actions">
+              <a class="btn primary" href="The_Last_Witness_Volume_Three_The_Fifth_Copy_PUBLICATION_EDIT_PASS_60_NO_BLANK_PAGES.pdf" target="_blank" rel="noopener">Read online</a>
+              <a class="btn secondary" href="The_Last_Witness_Volume_Three_The_Fifth_Copy_PUBLICATION_EDIT_PASS_60_NO_BLANK_PAGES.pdf" download>Download PDF</a>
+            </div>
+          </article>
+        </div>
+        <p class="book-note">Reading and download links work after the matching PDF files have been uploaded to the same GitHub repository folder as this HTML page.</p>
+      </section>
     </div>
   </section>
 </main>
@@ -85,11 +122,15 @@
   <div class="container footer-inner">
     <div>
       <strong>Emmanuel Osei Kojo Ninsin</strong>
-      <span>Education • Leadership • Justice</span>
+      <span>Education · Leadership · Justice</span>
     </div>
     <p>© <span id="year">2026</span> Emmanuel Osei Kojo Ninsin. All rights reserved.</p>
   </div>
 </footer>
 <script src="script.js"></script>
+<script>
+  const yearElement = document.getElementById('year');
+  if (yearElement) yearElement.textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
