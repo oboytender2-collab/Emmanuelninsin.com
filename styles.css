@@ -214,3 +214,17 @@ body.homepage nav {
   display: block !important;
 }
 
+.read-story-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #173b68;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.read-story-btn:hover {
+  background: #b78a19;
+}
