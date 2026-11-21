@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,25 +7,107 @@
   <meta name="description" content="Explore books by Emmanuel Osei Kojo Ninsin: Education Is Key to Life and The Last Witness mystery-suspense series.">
   <link rel="stylesheet" href="styles.css">
   <title>My Books | Emmanuel Osei Kojo Ninsin</title>
+
   <style>
-    .books-intro{max-width:760px;margin-bottom:2rem;line-height:1.7}
-    .book-group{margin:2.5rem 0}
-    .book-group>h2{margin-bottom:1rem}
-    .book-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:1.25rem}
-    .book-card{height:100%;display:flex;flex-direction:column}
-    .book-tag{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;opacity:.8}
-    .book-card h3{margin-top:.25rem}
-    .book-meta{margin-top:auto;padding-top:1rem;font-size:.92rem}
-    .book-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1rem}
-    .book-actions .btn{display:inline-block;text-decoration:none;text-align:center}
-    .book-note{font-size:.92rem;opacity:.85;margin-top:1rem}
+    .books-intro {
+      max-width: 760px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .book-group {
+      margin: 2.5rem 0;
+    }
+
+    .book-group > h2 {
+      margin-bottom: 1rem;
+    }
+
+    .book-cards {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 270px), 1fr)
+      );
+      gap: 1.25rem;
+    }
+
+    .book-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-tag {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 700;
+      opacity: .8;
+    }
+
+    .book-card h3 {
+      margin-top: .25rem;
+    }
+
+    .book-meta {
+      margin-top: auto;
+      padding-top: 1rem;
+      font-size: .92rem;
+    }
+
+    .book-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+      margin-top: 1rem;
+    }
+
+    .book-actions .btn {
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .book-note {
+      font-size: .92rem;
+      opacity: .85;
+      margin-top: 1rem;
+      line-height: 1.7;
+    }
+
+    .book-card p {
+      line-height: 1.7;
+    }
+
+    .book-actions .primary {
+      min-width: 120px;
+    }
+
+    @media(max-width: 600px) {
+      .book-actions {
+        flex-direction: column;
+      }
+
+      .book-actions .btn {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
   </style>
 </head>
+
 <body>
+
 <header class="site-header">
   <nav class="navbar container" aria-label="Main navigation">
     <a class="brand" href="index.html">EOKN<span>.</span></a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <button class="menu-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false">☰</button>
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="my-story.html">About Me</a></li>
@@ -40,101 +123,325 @@
 <main>
   <section class="section">
     <div class="container">
+
       <p class="eyebrow">MY BOOKS AND PUBLICATIONS</p>
+
       <h1>My Books</h1>
-      <p class="books-intro">Welcome to my book collection. Explore <em>Education Is Key to Life</em>, a series about learning, personal growth, leadership and positive change, alongside <em>The Last Witness</em>, a Ghana-set mystery-suspense series. Use the buttons to read each PDF online or download it.</p>
+
+      <p class="books-intro">
+        Welcome to my book collection. Explore
+        <em>Education Is Key to Life</em>, a series about
+        learning, personal growth, leadership and positive
+        change, alongside <em>The Last Witness</em>, a
+        Ghana-set mystery-suspense series.
+
+        All books can be read online directly through
+        the reading links. Downloading is optional.
+      </p>
+
+      <!-- EDUCATION IS KEY TO LIFE -->
 
       <section class="book-group" aria-labelledby="education-series">
+
         <h2 id="education-series">Education Is Key to Life</h2>
+
         <div class="book-cards">
+
+          <!-- VOLUME ONE -->
+
           <article class="card book-card">
+
             <p class="book-tag">Volume One</p>
+
             <h3>Education Is Key to Life</h3>
-            <p>A motivational exploration of education, personal responsibility, opportunity and the role learning plays in shaping the future.</p>
-            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Ninsin</p>
+
+            <p>
+              A motivational exploration of education,
+              personal responsibility, opportunity and
+              the role learning plays in shaping the future.
+            </p>
+
+            <p class="book-meta">
+              <strong>Author:</strong> Emmanuel Osei Ninsin
+            </p>
+
             <div class="book-actions">
-              <a class="btn primary" href="Education_Is_Key_to_Life_Print_Ready.pdf" target="_blank" rel="noopener">Read online</a>
-              <a class="btn secondary" href="Education_Is_Key_to_Life_Print_Ready.pdf" download>Download PDF</a>
+
+              <a class="btn primary"
+                href="Education_Is_Key_to_Life_Print_Ready.pdf"
+                target="_blank"
+                rel="noopener">
+                Read Online
+              </a>
+
+              <a class="btn secondary"
+                href="Education_Is_Key_to_Life_Print_Ready.pdf"
+                download>
+                Download PDF
+              </a>
+
             </div>
           </article>
+
+          <!-- VOLUME TWO -->
+
           <article class="card book-card">
+
             <p class="book-tag">Volume Two</p>
+
             <h3>From Knowledge to Transformation</h3>
-            <p>Turning education into practical skills, personal growth, leadership and lasting change.</p>
-            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Ninsin · 2026</p>
+
+            <p>
+              Turning education into practical skills,
+              personal growth, leadership and lasting change.
+            </p>
+
+            <p class="book-meta">
+              <strong>Author:</strong> Emmanuel Osei Ninsin · 2026
+            </p>
+
             <div class="book-actions">
-              <a class="btn primary" href="Education_Is_Key_to_Life_Volume_Two_Print_Ready_Clean.pdf" target="_blank" rel="noopener">Read online</a>
-              <a class="btn secondary" href="Education_Is_Key_to_Life_Volume_Two_Print_Ready_Clean.pdf" download>Download PDF</a>
+
+              <a class="btn primary"
+                href="Education_Is_Key_to_Life_Volume_Two_Print_Ready_Clean.pdf"
+                target="_blank"
+                rel="noopener">
+                Read Online
+              </a>
+
+              <a class="btn secondary"
+                href="Education_Is_Key_to_Life_Volume_Two_Print_Ready_Clean.pdf"
+                download>
+                Download PDF
+              </a>
+
             </div>
           </article>
+
+          <!-- VOLUME THREE -->
+
           <article class="card book-card">
+
             <p class="book-tag">Volume Three</p>
+
             <h3>From Transformation to Impact</h3>
-            <p>Exploring how personal growth can become practical service, responsible leadership and positive change in society.</p>
-            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Ninsin · 2026</p>
+
+            <p>
+              Exploring how personal growth can become
+              practical service, responsible leadership
+              and positive change in society.
+            </p>
+
+            <p class="book-meta">
+              <strong>Author:</strong> Emmanuel Osei Ninsin · 2026
+            </p>
+
             <div class="book-actions">
-              <a class="btn primary" href="Volume_Three_From_Transformation_to_Impact_2.pdf" target="_blank" rel="noopener">Read online</a>
-              <a class="btn secondary" href="Volume_Three_From_Transformation_to_Impact_2.pdf" download>Download PDF</a>
+
+              <a class="btn primary"
+                href="Volume_Three_From_Transformation_to_Impact_2.pdf"
+                target="_blank"
+                rel="noopener">
+                Read Online
+              </a>
+
+              <a class="btn secondary"
+                href="Volume_Three_From_Transformation_to_Impact_2.pdf"
+                download>
+                Download PDF
+              </a>
+
             </div>
           </article>
+
         </div>
       </section>
 
+      <!-- THE LAST WITNESS -->
+
       <section class="book-group" aria-labelledby="last-witness-series">
+
         <h2 id="last-witness-series">The Last Witness</h2>
-        <p class="books-intro">A mystery-suspense series set in Ghana, following an investigation shaped by a murdered judge, missing records, conflicting accounts and long-buried questions.</p>
+
+        <p class="books-intro">
+          A mystery-suspense series set in Ghana, following
+          an investigation shaped by a murdered judge,
+          missing records, conflicting accounts and
+          long-buried questions.
+        </p>
+
         <div class="book-cards">
+
+          <!-- VOLUME ONE -->
+
           <article class="card book-card">
+
             <p class="book-tag">Volume One</p>
+
             <h3>The Last Witness</h3>
-            <p>The opening instalment introduces the case and the questions that drive the investigation.</p>
-            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Kojo Ninsin · 2026</p>
+
+            <p>
+              The opening instalment introduces the case
+              and the questions that drive the investigation.
+            </p>
+
+            <p class="book-meta">
+              <strong>Author:</strong> Emmanuel Osei Kojo Ninsin · 2026
+            </p>
+
             <div class="book-actions">
-              <a class="btn primary" href="The_Last_Witness_COMPLETE_PRINT_READY_Corrected.pdf" target="_blank" rel="noopener">Read online</a>
-              <a class="btn secondary" href="The_Last_Witness_COMPLETE_PRINT_READY_Corrected.pdf" download>Download PDF</a>
+
+              <a class="btn primary"
+                href="The_Last_Witness_COMPLETE_PRINT_READY_Corrected.pdf"
+                target="_blank"
+                rel="noopener">
+                Read Online
+              </a>
+
+              <a class="btn secondary"
+                href="The_Last_Witness_COMPLETE_PRINT_READY_Corrected.pdf"
+                download>
+                Download PDF
+              </a>
+
             </div>
           </article>
+
+          <!-- VOLUME TWO -->
+
           <article class="card book-card">
+
             <p class="book-tag">Volume Two</p>
+
             <h3>The Last Witness — Volume Two</h3>
-            <p>The investigation continues as records, testimony and unanswered questions reveal new leads.</p>
-            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Kojo Ninsin · 2026</p>
+
+            <p>
+              The investigation continues as records,
+              testimony and unanswered questions reveal
+              new leads.
+            </p>
+
+            <p class="book-meta">
+              <strong>Author:</strong> Emmanuel Osei Kojo Ninsin · 2026
+            </p>
+
             <div class="book-actions">
-              <a class="btn primary" href="The_Last_Witness_Volume_Two.pdf" target="_blank" rel="noopener">Read online</a>
-              <a class="btn secondary" href="The_Last_Witness_Volume_Two.pdf" download>Download PDF</a>
+
+              <a class="btn primary"
+                href="The_Last_Witness_Volume_Two.pdf"
+                target="_blank"
+                rel="noopener">
+                Read Online
+              </a>
+
+              <a class="btn secondary"
+                href="The_Last_Witness_Volume_Two.pdf"
+                download>
+                Download PDF
+              </a>
+
             </div>
           </article>
+
+          <!-- VOLUME THREE: THE FIFTH COPY -->
+
           <article class="card book-card">
+
             <p class="book-tag">Volume Three</p>
+
             <h3>The Last Witness — The Fifth Copy</h3>
-            <p>The next stage of the investigation, where disputed documents raise new questions and each clue must be tested.</p>
-            <p class="book-meta"><strong>Author:</strong> Emmanuel Osei Kojo Ninsin · 2026</p>
+
+            <p>
+              The truth has a way of resurfacing, even when
+              powerful forces are determined to keep it buried.
+            </p>
+
+            <p>
+              In this gripping continuation of
+              <em>The Last Witness</em>, secrets deepen,
+              questions multiply, and the search for truth
+              takes unexpected turns. As the past collides
+              with the present, the boundaries between truth,
+              deception, loyalty and justice become
+              increasingly difficult to distinguish.
+            </p>
+
+            <p>
+              A compelling story of mystery, suspense and
+              the relentless pursuit of truth.
+            </p>
+
+            <p>
+              <strong>
+                Some secrets are hidden. Others are waiting
+                to be discovered.
+              </strong>
+            </p>
+
+            <p class="book-meta">
+              <strong>Author:</strong> Emmanuel Osei Kojo Ninsin · 2026
+            </p>
+
             <div class="book-actions">
-              <a class="btn primary" href="The_Last_Witness_Volume_Three.pdf" target="_blank" rel="noopener">Read online</a>
-              <a class="btn secondary" href="The_Last_Witness_Volume_Three.pdf" download>Download PDF</a>
+
+              <a class="btn primary"
+                href="The_Last_Witness_Volume_Three.pdf"
+                target="_blank"
+                rel="noopener">
+                Read Online
+              </a>
+
+              <a class="btn secondary"
+                href="The_Last_Witness_Volume_Three.pdf"
+                download>
+                Download PDF
+              </a>
+
             </div>
-            <p class="book-note">Volume Three is a working publication edition and should receive its remaining editorial and print-layout checks before being described as final.</p>
           </article>
+
         </div>
-        <p class="book-note">PDF links work when each matching PDF file is uploaded to the same main repository folder as <code>my-book.html</code>. Filenames must match exactly, including underscores and capital letters.</p>
+
+        <p class="book-note">
+          Select Read Online to open a book in your browser.
+          You do not need to download it to read it.
+          The Download PDF option is available for readers
+          who wish to keep a copy.
+        </p>
+
       </section>
+
     </div>
   </section>
 </main>
 
 <footer class="footer">
+
   <div class="container footer-inner">
+
     <div>
       <strong>Emmanuel Osei Kojo Ninsin</strong>
       <span>Education · Leadership · Justice</span>
     </div>
-    <p>© <span id="year">2026</span> Emmanuel Osei Kojo Ninsin. All rights reserved.</p>
+
+    <p>
+      © <span id="year">2026</span>
+      Emmanuel Osei Kojo Ninsin. All rights reserved.
+    </p>
+
   </div>
+
 </footer>
+
 <script src="script.js"></script>
+
 <script>
   const yearElement = document.getElementById('year');
-  if (yearElement) yearElement.textContent = new Date().getFullYear();
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
 </script>
+
 </body>
 </html>
