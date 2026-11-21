@@ -1,12 +1,175 @@
-<section id="biography">
-  <h2>Biography</h2>
-  <p>
-    My journey is shaped by learning, perseverance, faith, service and
-    the determination to keep moving forward. My experiences continue
-    to teach me the value of humility, hard work and hope.
-  </p>
 
-  <a href="biography.html" class="read-story-btn">
-    Read My Full Story →
-  </a>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The experiences, lessons, achievements and ambitions behind Emmanuel Osei Kojo Ninsin's journey.">
+  <title>The Untold Story | Emmanuel Osei Kojo Ninsin</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6fa;
+      color: #202b3c;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #102747;
+      color: white;
+      text-align: center;
+      padding: 40px 18px;
+    }
+
+    header h1 { margin: 0 0 8px; }
+
+    main {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 0 18px;
+    }
+
+    section {
+      background: white;
+      padding: 22px;
+      margin-bottom: 20px;
+      border-radius: 9px;
+      box-shadow: 0 3px 12px #0000000d;
+    }
+
+    h2 { color: #173b68; }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px;
+      background: #173b68;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+
+    nav a:hover { background: #b78a19; }
+
+    .read-story-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: #173b68;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .read-story-btn:hover { background: #b78a19; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #102747;
+      color: white;
+    }
+
+    footer a { color: #f5d77d; }
+
+    @media (max-width: 600px) {
+      header { padding: 34px 16px; }
+      header h1 { font-size: 2rem; }
+      main { margin: 22px auto; }
+      section { padding: 20px; }
+      nav { gap: 6px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>The Untold Story</h1>
+    <p>The experiences, lessons and ambitions behind my journey.</p>
+  </header>
+
+  <nav aria-label="Website navigation">
+    <a href="index.html">Home</a>
+    <a href="my-story.html">My Story</a>
+    <a href="gallery.html">Picture Gallery</a>
+    <a href="my-book.html">Books</a>
+    <a href="contact.html">Contact Me</a>
+  </nav>
+
+  <main>
+
+    <section id="biography">
+      <h2>Biography</h2>
+      <p>
+        My journey is shaped by learning, perseverance, faith, service and
+        the determination to keep moving forward. My experiences continue
+        to teach me the value of humility, hard work and hope.
+      </p>
+
+      <a href="biography.html" class="read-story-btn">
+        Read My Full Story →
+      </a>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <p>
+        Each milestone represents effort, growth and a willingness to accept
+        responsibility. My educational progress and student leadership
+        journey remain important parts of my story.
+      </p>
+      <p>
+        In October 2026, I was sworn in as DESAG-UCC Central Regional Welfare
+        Officer for the 2026/2027 term.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>
+        My education journey began in basic school, continued through
+        University Practice Senior High School, and led to my ongoing
+        Bachelor of Education in Social Studies studies at the University
+        of Cape Coast College of Distance Education.
+      </p>
+      <p>
+        My tertiary journey is still ongoing, and I look forward to the
+        lessons and opportunities ahead.
+      </p>
+    </section>
+
+    <section id="law-and-justice">
+      <h2>Law and Justice</h2>
+      <p>
+        I aspire to study law and use my knowledge to promote fairness,
+        human rights and access to justice, particularly for people who
+        may struggle to have their voices heard.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Emmanuel Osei Kojo Ninsin.</p>
+    <a href="index.html">Back to Home</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
