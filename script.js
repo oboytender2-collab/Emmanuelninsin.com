@@ -1,4 +1,8 @@
 
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
 const toggle = document.querySelector('.menu-toggle');
 const links = document.querySelector('.nav-links');
 
@@ -16,7 +20,12 @@ if (toggle && links) {
   });
 }
 
+/* =========================
+   CURRENT YEAR
+========================= */
+
 const yearElement = document.getElementById('year');
+
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
@@ -25,6 +34,7 @@ if (yearElement) {
    DAILY BIBLE VERSE
    New World Translation
 ========================= */
+
 const dailyVerses = [
   ['Psalm 23:1', 'Jehovah is my Shepherd. I will lack nothing.', 'https://www.jw.org/en/library/bible/nwt/books/psalms/23/'],
   ['Proverbs 3:5', 'Trust in Jehovah with all your heart, And do not rely on your own understanding.', 'https://www.jw.org/en/library/bible/nwt/books/proverbs/3/'],
@@ -46,6 +56,7 @@ if (verseReference && verseText && dailyVerses.length) {
   const now = new Date();
   const yearStart = new Date(now.getFullYear(), 0, 1);
   const dayNumber = Math.floor((now - yearStart) / 86400000) + 1;
+
   const [reference, verse, bibleLink] =
     dailyVerses[(dayNumber - 1) % dailyVerses.length];
 
@@ -76,6 +87,7 @@ if (verseReference && verseText && dailyVerses.length) {
 /* =========================
    QUOTE OF THE DAY
 ========================= */
+
 const dailyQuotes = [
   'Education opens doors, but character determines what you do after you enter.',
   'Small steps taken consistently can become a remarkable journey.',
@@ -120,33 +132,86 @@ if (quoteText && quoteAuthor && dailyQuotes.length) {
 
   quoteText.textContent =
     dailyQuotes[(dayNumber - 1) % dailyQuotes.length];
+
   quoteAuthor.textContent = '— Daily Reflection';
 }
 
 /* =========================
    DAILY SPORTS UPDATES
+   MAJOR FOOTBALL COMPETITIONS
+   NBA BASKETBALL AND ATP TENNIS
 ========================= */
+
 const sportsGrid = document.getElementById('sports-grid');
 const sportsUpdated = document.getElementById('sports-updated');
 const refreshSports = document.getElementById('refresh-sports');
 
 const sportsFeeds = [
   {
-    name: 'Football',
-    news: 'https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/news',
-    score: 'https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard'
+    name: 'English Premier League',
+    sport: 'soccer',
+    league: 'eng.1'
   },
   {
-    name: 'Basketball',
-    news: 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news',
-    score: 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard'
+    name: 'Spanish La Liga',
+    sport: 'soccer',
+    league: 'esp.1'
   },
   {
-    name: 'Tennis',
-    news: 'https://site.api.espn.com/apis/site/v2/sports/tennis/atp/news',
-    score: 'https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard'
+    name: 'German Bundesliga',
+    sport: 'soccer',
+    league: 'ger.1'
+  },
+  {
+    name: 'Italian Serie A',
+    sport: 'soccer',
+    league: 'ita.1'
+  },
+  {
+    name: 'French Ligue 1',
+    sport: 'soccer',
+    league: 'fra.1'
+  },
+  {
+    name: 'Ghana Premier League',
+    sport: 'soccer',
+    league: 'gha.1'
+  },
+  {
+    name: 'Major League Soccer (MLS)',
+    sport: 'soccer',
+    league: 'usa.1'
+  },
+  {
+    name: 'UEFA Champions League',
+    sport: 'soccer',
+    league: 'uefa.champions'
+  },
+  {
+    name: 'FIFA World Cup',
+    sport: 'soccer',
+    league: 'fifa.world'
+  },
+  {
+    name: 'Africa Cup of Nations (AFCON)',
+    sport: 'soccer',
+    league: 'caf.nations'
+  },
+  {
+    name: 'NBA Basketball',
+    sport: 'basketball',
+    league: 'nba'
+  },
+  {
+    name: 'ATP Tennis',
+    sport: 'tennis',
+    league: 'atp'
   }
 ];
+
+/* =========================
+   SECURITY: HTML ESCAPING
+========================= */
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>'"]/g, character => ({
@@ -158,16 +223,33 @@ function escapeHtml(value) {
   }[character]));
 }
 
+/* =========================
+   FETCH SPORTS DATA
+========================= */
+
 async function getJson(url) {
-  const response = await fetch(url, { cache: 'no-store' });
+  const response = await fetch(url, {
+    cache: 'no-store'
+  });
+
   if (!response.ok) {
     throw new Error('Sports feed unavailable');
   }
+
   return response.json();
 }
 
+function getFeedUrl(feed, type) {
+  return `https://site.api.espn.com/apis/site/v2/sports/${feed.sport}/${feed.league}/${type}`;
+}
+
+/* =========================
+   FORMAT MATCH INFORMATION
+========================= */
+
 function formatEvent(event) {
-  const competitors = event?.competitions?.[0]?.competitors || [];
+  const competitors =
+    event?.competitions?.[0]?.competitors || [];
 
   if (competitors.length >= 2) {
     const names = competitors.map(team => {
@@ -175,89 +257,136 @@ function formatEvent(event) {
         team.team?.displayName ||
         team.athlete?.displayName ||
         'Team';
+
       return `${name} ${team.score || ''}`.trim();
     });
 
     const status = event.status?.type?.shortDetail;
-    return names.join(' vs ') + (status ? ' — ' + status : '');
+
+    return names.join(' vs ') +
+      (status ? ` — ${status}` : '');
   }
 
   return event?.name || 'Scheduled event';
 }
 
+/* =========================
+   LOAD ALL SPORTS UPDATES
+========================= */
+
 async function loadSports() {
   if (!sportsGrid) return;
 
-  sportsGrid.innerHTML = sportsFeeds.map(feed =>
-    `<article class="sports-card sports-loading">
-      <h3>${feed.name}</h3>
-      <p>Loading today's updates…</p>
-    </article>`
-  ).join('');
+  sportsGrid.innerHTML = sportsFeeds.map(feed => `
+    <article class="sports-card sports-loading">
+      <h3>${escapeHtml(feed.name)}</h3>
+      <p>Loading updates…</p>
+    </article>
+  `).join('');
 
   if (sportsUpdated) {
-    sportsUpdated.textContent = 'Updating…';
+    sportsUpdated.textContent = 'Updating sports information…';
   }
 
-  const cards = await Promise.all(sportsFeeds.map(async feed => {
-    try {
-      const [news, scores] = await Promise.all([
-        getJson(feed.news),
-        getJson(feed.score)
-      ]);
+  const cards = await Promise.all(
+    sportsFeeds.map(async feed => {
 
-      const articles = (news.articles || []).slice(0, 3);
-      const events = (scores.events || []).slice(0, 3);
+      const [newsResult, scoreResult] =
+        await Promise.allSettled([
+          getJson(getFeedUrl(feed, 'news')),
+          getJson(getFeedUrl(feed, 'scoreboard'))
+        ]);
+
+      const news =
+        newsResult.status === 'fulfilled'
+          ? newsResult.value
+          : null;
+
+      const scores =
+        scoreResult.status === 'fulfilled'
+          ? scoreResult.value
+          : null;
+
+      const articles =
+        (news?.articles || []).slice(0, 3);
+
+      const events =
+        (scores?.events || []).slice(0, 3);
+
+      /* Match scores and schedules */
+
+      const scoreItems = events.map(event => `
+        <li>
+          <strong>${escapeHtml(formatEvent(event))}</strong>
+          <span class="sports-meta">Score / schedule</span>
+        </li>
+      `).join('');
+
+      /* Latest sports headlines */
 
       const newsItems = articles.map(article => {
-        const url = escapeHtml(article.links?.web?.href || '#');
+        const rawUrl = article.links?.web?.href || '';
+
+        const safeUrl =
+          /^https?:\/\//i.test(rawUrl)
+            ? escapeHtml(rawUrl)
+            : '';
+
         const headline = escapeHtml(
-          article.headline || article.title || 'Latest sports story'
+          article.headline ||
+          article.title ||
+          'Latest sports story'
         );
+
         const date = escapeHtml(
           article.published
             ? new Date(article.published).toLocaleDateString()
             : 'Latest'
         );
 
-        return `<li>
-          <a href="${url}" target="_blank" rel="noopener noreferrer">${headline}</a>
-          <span class="sports-meta">${date}</span>
-        </li>`;
+        return `
+          <li>
+            ${
+              safeUrl
+                ? `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${headline}</a>`
+                : headline
+            }
+            <span class="sports-meta">${date}</span>
+          </li>
+        `;
       }).join('');
 
-      const scoreItems = events.map(event =>
-        `<li>
-          <strong>${escapeHtml(formatEvent(event))}</strong>
-          <span class="sports-meta">Score / schedule</span>
-        </li>`
-      ).join('');
+      let content = scoreItems + newsItems;
 
-      let items = scoreItems + newsItems;
-
-      if (!items) {
-        items = '<li>No new updates were returned right now.</li>';
+      if (!content) {
+        content = `
+          <li>
+            No updates are available right now.
+            Please check again later.
+          </li>
+        `;
       }
 
-      return `<article class="sports-card">
-        <h3>${feed.name}</h3>
-        <ul>${items}</ul>
-        <p class="sports-source">
-          Source: <a href="https://www.espn.com/"
-          target="_blank" rel="noopener noreferrer">ESPN</a>
-        </p>
-      </article>`;
-    } catch (error) {
-      return `<article class="sports-card">
-        <h3>${feed.name}</h3>
-        <p>Live updates are temporarily unavailable. Please refresh shortly.</p>
-        <p class="sports-source">
-          Source: <a href="https://www.espn.com/"
-          target="_blank" rel="noopener noreferrer">ESPN</a>
-        </p>
-      </article>`;
-    }
-  }));
+      return `
+        <article class="sports-card">
+          <h3>${escapeHtml(feed.name)}</h3>
+
+          <ul>
+            ${content}
+          </ul>
+
+          <p class="sports-source">
+            Source:
+            <a
+              href="https://www.espn.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >ESPN</a>
+          </p>
+        </article>
+      `;
+    })
+  );
 
   sportsGrid.innerHTML = cards.join('');
 
@@ -266,6 +395,10 @@ async function loadSports() {
       `Last checked: ${new Date().toLocaleString()}`;
   }
 }
+
+/* =========================
+   INITIAL LOAD AND REFRESH
+========================= */
 
 loadSports();
 
